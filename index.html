@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123fbd">
+  <meta name="description" content="AnySales — produtos úteis para o dia a dia, com encomendas simples em Moçambique.">
+  <title>AnySales — Encontra. Escolhe. Recebe.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">Escolhas inteligentes para o teu dia a dia <span>•</span> AnySales</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="AnySales página inicial"><span class="brand-mark">A</span><span>Any<span class="brand-blue">Sales</span><small>ESCOLHAS INTELIGENTES</small></span></a>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#vantagens">Porquê AnySales?</a>
+    </nav>
+    <button class="cart-button" id="open-cart" aria-label="Abrir carrinho">Carrinho <span id="cart-count">0</span></button>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> BEM-VINDO À ANYSALES</p>
+        <h1>Pequenas escolhas.<br><span>Grandes diferenças.</span></h1>
+        <p class="hero-description">Descobre produtos práticos que tornam o teu dia mais simples. Escolhe os teus favoritos e faz a tua encomenda sem complicações.</p>
+        <div class="hero-actions"><a class="primary-button" href="#produtos">Explorar produtos <span>↗</span></a><a class="text-link" href="#vantagens">Conhecer a loja <span>→</span></a></div>
+        <div class="hero-proof"><div class="proof-icon">✓</div><p><strong>Compra com tranquilidade</strong><br><span>Informação clara antes de encomendar.</span></p></div>
+      </div>
+      <div class="hero-visual" aria-label="Seleção de produtos em destaque">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-note note-top"><span class="note-icon">✦</span><span><strong>Escolhas úteis</strong><small>Para todos os dias</small></span></div>
+        <div class="hero-product-card">
+          <div class="hero-product-art"><div class="art-circle"></div><div class="art-box"><span>AS</span></div><div class="art-spark">✦</div></div>
+          <div class="hero-product-caption"><span>SELECÇÃO ANYSALES</span><strong>O teu próximo favorito.</strong></div>
+        </div>
+        <div class="hero-note note-bottom"><span class="note-icon blue-note">↗</span><span><strong>Simples e prático</strong><small>Escolhe. Encomenda.</small></span></div>
+      </div>
+    </section>
+    <section class="benefits-strip" id="vantagens">
+      <div><span class="benefit-icon">◇</span><span><strong>Produtos seleccionados</strong><small>Utilidade em primeiro lugar</small></span></div>
+      <div><span class="benefit-icon">◎</span><span><strong>Encomenda simples</strong><small>Escolhe sem complicações</small></span></div>
+      <div><span class="benefit-icon">♡</span><span><strong>Apoio próximo</strong><small>Fala connosco para esclarecer</small></span></div>
+    </section>
+    <section class="products-section" id="produtos">
+      <div class="section-heading"><div><p class="eyebrow">A NOSSA SELECÇÃO</p><h2>Descobre algo <span>útil.</span></h2><p>Produtos para facilitar a rotina, com uma experiência de compra simples.</p></div><div class="product-controls"><label class="search-box"><span>⌕</span><input id="product-search" type="search" placeholder="Procurar produtos…" aria-label="Procurar produtos"></label><select id="category-filter" aria-label="Filtrar por categoria"><option value="all">Todas as categorias</option><option value="Casa">Casa</option><option value="Carro">Carro</option><option value="Acessórios">Acessórios</option></select></div></div>
+      <div class="demo-notice"><span>ℹ</span> Os produtos abaixo são exemplos de demonstração. Actualiza nomes, imagens e preços antes de divulgar a loja.</div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>Não encontrámos produtos com essa pesquisa. Experimenta outro termo.</p>
+    </section>
+    <section class="closing-banner"><div><p class="eyebrow">A TUA PRÓXIMA DESCOBERTA</p><h2>O útil também pode<br>ser <span>extraordinário.</span></h2><p>Explora a selecção e encontra algo que combina contigo.</p></div><a class="light-button" href="#produtos">Ver produtos <span>→</span></a><div class="banner-decoration">A<span>S</span></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">A</span><span>Any<span class="brand-blue">Sales</span><small>ESCOLHAS INTELIGENTES</small></span></a><p>Compras mais simples para o dia a dia.</p><span class="copyright">© <span id="year"></span> AnySales. Todos os direitos reservados.</span></footer>
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="cart-header"><div><p class="eyebrow">A TUA SELECÇÃO</p><h2>O teu carrinho</h2></div><button class="close-cart" id="close-cart" aria-label="Fechar carrinho">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span>🛍</span><h3>Ainda está vazio</h3><p>Adiciona um produto de que gostes e ele aparecerá aqui.</p><button class="primary-button" id="continue-shopping">Explorar produtos</button></div>
+    <div class="cart-footer" id="cart-footer" hidden><div class="cart-total"><span>Total estimado</span><strong id="cart-total">0 MT</strong></div><p>O custo de entrega e a disponibilidade devem ser confirmados antes do pagamento.</p><button class="primary-button checkout-button" id="checkout-button">Preparar encomenda <span>→</span></button></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
